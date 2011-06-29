@@ -1,28 +1,43 @@
-
+##################################################################
 
 01) Acquiring the version of a test program:
 
-    tp.pl -version
+    Environment Variable(s):
+    JATF_TP_MODE=version
 
+        tp.pl
 
 02) Invoking a test program (setup mode):
 
     Environment Variable(s):
     JATF_BASE_DIR 
+    JATF_SETUP_LOG=$JATF_BASE_DIR/$JATF_TP_KEY/setup/log.txt
+    JATF_SETUP_STATUS=$JATF_BASE_DIR/$JATF_TP_KEY/setup/status.txt
+    JATF_TP_KEY 
+    JATF_TP_MODE=setup
 
-    tp.pl -setup
+        tp.pl
 
 03) Invoking a test program (main mode):
 
     Environment Variable(s):
     JATF_BASE_DIR 
+    JATF_MAIN_LOG=$JATF_BASE_DIR/$JATF_TP_KEY/main/log.txt
+    JATF_MAIN_STATUS=$JATF_BASE_DIR/$JATF_TP_KEY/main/status.txt
+    JATF_TP_KEY 
+    JATF_TP_MODE=main
 
-    tp.pl -main
+        tp.pl
 
 04) Invoking a test program (cleanup mode):
 
     Environment Variable(s):
     JATF_BASE_DIR 
+    JATF_CLEANUP_LOG=$JATF_BASE_DIR/$JATF_TP_KEY/cleanup/log.txt
+    JATF_CLEANUP_STATUS=$JATF_BASE_DIR/$JATF_TP_KEY/cleanup/status.txt
+    JATF_TP_KEY 
+    JATF_TP_MODE=cleanup
 
-    tp.pl -cleanup
+        tp.pl
 
+##################################################################
